@@ -3,19 +3,31 @@
 body {
  font-family: 'Ramabhadra',
   sans-serif;
+ box-sizing: border-box;
 }
 
 p {
  font-family: 'Lora',
   serif;
+ font-size: 1.1em;
  line-height: 1.5em;
- text-align: justify;
  padding: 20px;
 }
 
 h1 {
  font-size: 2em;
  text-align: center;
+ padding: 20px;
+}
+
+h2 {
+ font-size: 1.7em;
+ text-align: center;
+ padding: 20px;
+}
+
+a {
+ text-decoration: none;
 }
 
 /* Navigation Setup */
@@ -67,7 +79,7 @@ nav input:checked~#navbar_list {
  overflow-y: auto;
 }
 
-#header {
+.banner {
  position: relative;
  display: flex;
  flex-direction: column;
@@ -76,14 +88,15 @@ nav input:checked~#navbar_list {
  height: 100%;
 }
 
-#header h1,
-#header p {
+.banner h1,
+.banner p {
  color: white;
+ font-family: 'Ramabhadra',
+  sans-serif;
 }
 
-#header::after {
+.banner::after {
  content: " ";
- background: url(./images/banners/banner-top.jpg) center no-repeat;
  position: absolute;
  top: 0;
  right: 0;
@@ -94,11 +107,74 @@ nav input:checked~#navbar_list {
  z-index: -1;
 }
 
+header::after {
+ background: url(./images/banners/banner-top.jpg) center no-repeat;
+}
+
+#quote::after {
+ background: url(./images/banners/banner-quote.jpg) center no-repeat;
+}
+
+/* Article setup */
+
 article {
  background: white;
  height: 100vh;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
 }
 
-article p {
- margin-top: auto;
+/* Video setup */
+
+#video {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ width: 100vw;
+ height: 100vh;
+ background: white;
+}
+
+#video iframe {
+ padding-left: 5%;
+ padding-right: 5%;
+}
+
+/* Subscription setup */
+
+#subscription {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ background: lightgray;
+ height: 100vh;
+}
+
+#subscription form {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+form input,
+button {
+ text-align: center;
+ width: 80%;
+ max-width: 500px;
+ padding: 10px;
+ font-size: 1.1em;
+ border-radius: 10px;
+}
+
+form input {
+ border: 1px solid grey;
+}
+
+form button {
+ background: transparent;
+ border: none;
+ font-weight: bold;
+ font-size: 1.5em;
 }
