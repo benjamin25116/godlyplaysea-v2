@@ -1,25 +1,37 @@
+/* Font Setup */
+
 body {
  font-family: 'Ramabhadra',
   sans-serif;
 }
 
 p {
-
  font-family: 'Lora',
   serif;
+ line-height: 1.5em;
+ text-align: justify;
+ padding: 20px;
 }
+
+h1 {
+ font-size: 2em;
+ text-align: center;
+}
+
+/* Navigation Setup */
 
 nav {
  background: lightgray;
  width: 100vw;
  position: fixed;
+ z-index: 1;
 }
 
 .navlink {
  display: block;
  text-decoration: none;
  color: black;
- padding: 8px 0px 8px 30px;
+ padding: 8px 0px 8px 15px;
 }
 
 nav input {
@@ -44,4 +56,49 @@ nav input:checked~label {
 nav input:checked~.dropdown-content,
 nav input:checked~#navbar_list {
  max-height: 100%;
+}
+
+/* Banner setup */
+
+.parallax_wrapper {
+ height: 100vh;
+ perspective: 2px;
+ overflow-x: hidden;
+ overflow-y: auto;
+}
+
+#header {
+ position: relative;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ height: 100%;
+}
+
+#header h1,
+#header p {
+ color: white;
+}
+
+#header::after {
+ content: " ";
+ background: url(./images/banners/banner-top.jpg) center no-repeat;
+ position: absolute;
+ top: 0;
+ right: 0;
+ bottom: 0;
+ left: 0;
+ background-size: 200vh;
+ transform: translateZ(-2px) scale(2);
+ z-index: -1;
+}
+
+article {
+ background: white;
+ height: 100vh;
+}
+
+article p {
+ margin-top: auto;
 }
