@@ -1,6 +1,47 @@
 body {
  font-family: 'Ramabhadra',
   sans-serif;
+}
+
+p {
+
  font-family: 'Lora',
   serif;
+}
+
+nav {
+ background: lightgray;
+ width: 100vw;
+ position: fixed;
+}
+
+.navlink {
+ display: block;
+ text-decoration: none;
+ color: black;
+ padding: 8px 0px 8px 30px;
+}
+
+nav input {
+ display: none;
+}
+
+#navbar_list {
+ max-height: 0;
+ overflow: hidden;
+}
+
+.dropdown-content {
+ max-height: 0;
+ overflow: hidden;
+ background: lightblue;
+}
+
+nav input:checked~label {
+ color: darkblue;
+}
+
+nav input:checked~.dropdown-content,
+nav input:checked~#navbar_list {
+ max-height: 100%;
 }

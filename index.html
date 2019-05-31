@@ -14,11 +14,14 @@
 
 <body>
  <nav>
-  <ul>
-   <li><a href="#header" class="navlink">Home</a></li>
+  <input type="checkbox" id="menu">
+  <label for="menu" class="navlink">Menu</label>
+  <ul id="navbar_list">
+   <li><a href="#header" class="navlink" class="active">Home</a></li>
    <li>
     <div class="dropdown">
-     <p>About</p>
+     <input type="checkbox" id="about">
+     <label for="about" class="navlink">About</label>
      <div class="dropdown-content">
       <a href="./about/what_is_godly_play.html" class="navlink">What is Godly Play</a>
       <a href="./about/elements_of_godly_play.html" class="navlink">Elements of Godly Play</a>
@@ -28,7 +31,8 @@
    </li>
    <li>
     <div class="dropdown">
-     <p>Our Story</p>
+     <input type="checkbox" id="our_story">
+     <label for="our_story" class="navlink">Our story</label>
      <div class="dropdown-content">
       <a href="./our_story/godly_play_in_ncc.html" class="navlink">Godly Play in NCC</a>
       <a href="./our_story/godly_play_in_malaysia.html" class="navlink">Godly Play in Malaysia</a>
