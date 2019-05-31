@@ -17,7 +17,7 @@
   <input type="checkbox" id="menu">
   <label for="menu" class="navlink">Menu</label>
   <ul id="navbar_list">
-   <li><a href="#header" class="navlink" class="active">Home</a></li>
+   <li><a href="./index.html" class="navlink">Home</a></li>
    <li>
     <div class="dropdown">
      <input type="checkbox" id="about">
@@ -45,7 +45,7 @@
   </ul>
  </nav>
  <section class="parallax_wrapper">
-  <header class="banner">
+  <header id="header" class="banner">
    <h1>Godly Play Southeast Asia</h1>
    <p>Invite children to explore God’s word through meaningful play</p>
   </header>
@@ -77,9 +77,16 @@
     never share your email address with a third party.</p>
    <form action="Leads to a thank you page">
     <input type="email" name="email" placeholder="Input your email">
+    <input type="email" name="bot_email" placeholder="Input your email" id="honeypot">
     <button type="submit">Subscribe</button>
    </form>
   </section>
+  <footer>
+   <a href="#header">Back to top</a>
+   <a href="https://www.nccsentul.com/">New Covenant Community</a>
+   <a href="https://www.godlyplayfoundation.org/">Godly Play Foundation</a>
+   <p>Copyright © 2019 New Covenant Community. All rights reserved.</p>
+  </footer>
  </section>
 </body>
 

@@ -1,3 +1,13 @@
+/* Color Setup */
+
+:root {
+ --tractor: #f71735;
+ --onyx: #31393c;
+ --gold: #ffb330;
+ --apricot: #facfad;
+ --verdi: #5abcb9;
+}
+
 /* Font Setup */
 
 body {
@@ -12,6 +22,7 @@ p {
  font-size: 1.1em;
  line-height: 1.5em;
  padding: 20px;
+ color: var(--onyx);
 }
 
 h1 {
@@ -24,16 +35,18 @@ h2 {
  font-size: 1.7em;
  text-align: center;
  padding: 20px;
+ color: var(--verdi);
 }
 
 a {
  text-decoration: none;
+ color: var(--gold);
 }
 
 /* Navigation Setup */
 
 nav {
- background: lightgray;
+ background: var(--onyx);
  width: 100vw;
  position: fixed;
  z-index: 1;
@@ -42,8 +55,14 @@ nav {
 .navlink {
  display: block;
  text-decoration: none;
- color: black;
+ color: white;
  padding: 8px 0px 8px 15px;
+}
+
+.navlink {
+ padding-top: 20px;
+ padding-bottom: 20px;
+ border-bottom: 0.5px solid var(--apricot);
 }
 
 nav input {
@@ -53,16 +72,17 @@ nav input {
 #navbar_list {
  max-height: 0;
  overflow: hidden;
+ padding-left: 3vw;
 }
 
 .dropdown-content {
  max-height: 0;
  overflow: hidden;
- background: lightblue;
+ padding-left: 5vw;
 }
 
 nav input:checked~label {
- color: darkblue;
+ color: var(--gold);
 }
 
 nav input:checked~.dropdown-content,
@@ -74,7 +94,7 @@ nav input:checked~#navbar_list {
 
 .parallax_wrapper {
  height: 100vh;
- perspective: 2px;
+ perspective: 1px;
  overflow-x: hidden;
  overflow-y: auto;
 }
@@ -86,6 +106,7 @@ nav input:checked~#navbar_list {
  justify-content: center;
  align-items: center;
  height: 100%;
+ background: rgba(0, 0, 0, 0.4);
 }
 
 .banner h1,
@@ -103,16 +124,22 @@ nav input:checked~#navbar_list {
  bottom: 0;
  left: 0;
  background-size: 200vh;
- transform: translateZ(-2px) scale(2);
+ transform: translateZ(-1px) scale(2);
  z-index: -1;
 }
 
 header::after {
- background: url(./images/banners/banner-top.jpg) center no-repeat;
+ background: url(./images/banners/banner-top.jpg) center/cover no-repeat;
 }
 
 #quote::after {
- background: url(./images/banners/banner-quote.jpg) center no-repeat;
+ background: url(./images/banners/banner-quote.jpg) center/cover no-repeat;
+}
+
+#quote p {
+ font-family: 'Lora',
+  serif;
+ font-size: 1.8em;
 }
 
 /* Article setup */
@@ -133,7 +160,8 @@ article {
  flex-direction: column;
  justify-content: center;
  width: 100vw;
- height: 100vh;
+ padding-top: 15vh;
+ padding-bottom: 15vh;
  background: white;
 }
 
@@ -148,8 +176,12 @@ article {
  display: flex;
  flex-direction: column;
  justify-content: center;
- background: lightgray;
+ background: var(--onyx);
  height: 100vh;
+}
+
+#subscription p {
+ color: white;
 }
 
 #subscription form {
@@ -177,4 +209,31 @@ form button {
  border: none;
  font-weight: bold;
  font-size: 1.5em;
+ color: var(--verdi);
+}
+
+#honeypot {
+ display: none;
+}
+
+/* Footer Setup */
+
+footer {
+ background: white;
+ padding-top: 20px;
+ display: flex;
+ flex-direction: column;
+ align-items: left;
+
+}
+
+footer a,
+p {
+ color: var(--onyx);
+ padding: 0px 20px 20px 20px;
+ font-weight: 200;
+}
+
+footer p {
+ font-size: 0.9em;
 }
