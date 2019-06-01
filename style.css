@@ -93,6 +93,44 @@ nav input:checked~#navbar_list {
  height: 100%;
 }
 
+/* Header setup */
+header {
+ padding-top: 50px;
+ display: flex;
+ flex-direction: column;
+ text-align: center;
+}
+
+#header_image {
+ width: 100vw;
+}
+
+/* Article setup */
+
+article {
+ background: white;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+
+/* Video setup */
+
+#video {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ padding-bottom: 50px;
+ background: white;
+}
+
+#video iframe {
+ width: 90vw;
+ height: calc(90vw / 16 * 9);
+ margin: auto;
+}
+
 /* Banner setup */
 
 .parallax_wrapper {
@@ -109,16 +147,7 @@ nav input:checked~#navbar_list {
  justify-content: center;
  align-items: center;
  height: 100%;
- background: rgba(0, 0, 0, 0.4);
-}
-
-.banner.about {
- background: none;
- height: 50vh;
-}
-
-.banner.about::after {
- transform: translateZ(-1px) scale(3);
+ background: rgba(0, 0, 0, 0.2);
 }
 
 .banner h1,
@@ -135,8 +164,8 @@ nav input:checked~#navbar_list {
  right: 0;
  bottom: 0;
  left: 0;
- background-size: 200vh;
- transform: translateZ(-1px) scale(2);
+ background-size: 100%;
+ /* transform: translateZ(-1px) scale(2); */
  z-index: -1;
 }
 
@@ -146,6 +175,23 @@ header::after {
 
 #quote::after {
  background: url(./images/banners/banner-quote.jpg) center/cover no-repeat;
+}
+
+#quote p {
+ font-family: 'Lora',
+  serif;
+ font-size: 1.8em;
+}
+
+/* About banner setup */
+
+.banner.about {
+ background: none;
+ height: 50vh;
+}
+
+.banner.about::after {
+ transform: translateZ(-1px) scale(3);
 }
 
 #about_1::after {
@@ -160,41 +206,9 @@ header::after {
  background: url(./images/banners/banner-quote.jpg) center/cover no-repeat;
 }
 
-#quote p {
- font-family: 'Lora',
-  serif;
- font-size: 1.8em;
-}
 
-/* Article setup */
 
-article {
- background: white;
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- padding-top: 5vh;
- padding-bottom: 5vh;
-}
 
-/* Video setup */
-
-#video {
- display: flex;
- flex-direction: column;
- justify-content: center;
- width: 100vw;
- padding-top: 15vh;
- padding-bottom: 15vh;
- background: white;
-}
-
-#video iframe {
- width: 90vw;
- height: 50vh;
- margin: auto;
-}
 
 /* Subscription setup */
 
