@@ -46,7 +46,7 @@ a {
 /* Navigation Setup */
 
 nav {
- background: var(--onyx);
+ background: white;
  width: 100vw;
  position: fixed;
  z-index: 1;
@@ -55,7 +55,7 @@ nav {
 .navlink {
  display: block;
  text-decoration: none;
- color: white;
+ color: var(--onyx);
  padding: 8px 0px 8px 15px;
 }
 
@@ -70,10 +70,9 @@ nav input {
 }
 
 #navbar_list {
- height: 0;
+ height: 0px;
  overflow: hidden;
  padding-left: 3vw;
-
 }
 
 .dropdown-content {
@@ -113,6 +112,15 @@ nav input:checked~#navbar_list {
  background: rgba(0, 0, 0, 0.4);
 }
 
+.banner.about {
+ background: none;
+ height: 50vh;
+}
+
+.banner.about::after {
+ transform: translateZ(-1px) scale(3);
+}
+
 .banner h1,
 .banner p {
  color: white;
@@ -140,6 +148,18 @@ header::after {
  background: url(./images/banners/banner-quote.jpg) center/cover no-repeat;
 }
 
+#about_1::after {
+ background: url(./images/banners/banner-quote.jpg) center/cover no-repeat;
+}
+
+#about_2::after {
+ background: url(./images/banners/banner-quote.jpg) center/cover no-repeat;
+}
+
+#about_3::after {
+ background: url(./images/banners/banner-quote.jpg) center/cover no-repeat;
+}
+
 #quote p {
  font-family: 'Lora',
   serif;
@@ -150,11 +170,12 @@ header::after {
 
 article {
  background: white;
- height: 100vh;
  display: flex;
  flex-direction: column;
  justify-content: center;
  align-items: center;
+ padding-top: 5vh;
+ padding-bottom: 5vh;
 }
 
 /* Video setup */
@@ -182,7 +203,8 @@ article {
  flex-direction: column;
  justify-content: center;
  background: var(--onyx);
- height: 100vh;
+ padding-top: 5vh;
+ padding-bottom: 5vh;
 }
 
 #subscription p {
