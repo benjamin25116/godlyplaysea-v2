@@ -70,13 +70,14 @@ nav input {
 }
 
 #navbar_list {
- max-height: 0;
+ height: 0;
  overflow: hidden;
  padding-left: 3vw;
+
 }
 
 .dropdown-content {
- max-height: 0;
+ height: 0;
  overflow: hidden;
  padding-left: 5vw;
 }
@@ -85,9 +86,12 @@ nav input:checked~label {
  color: var(--gold);
 }
 
-nav input:checked~.dropdown-content,
+nav input:checked~.dropdown-content {
+ height: 100%;
+}
+
 nav input:checked~#navbar_list {
- max-height: 100%;
+ height: 100%;
 }
 
 /* Banner setup */
@@ -166,8 +170,9 @@ article {
 }
 
 #video iframe {
- padding-left: 5%;
- padding-right: 5%;
+ width: 90vw;
+ height: 50vh;
+ margin: auto;
 }
 
 /* Subscription setup */
@@ -182,6 +187,7 @@ article {
 
 #subscription p {
  color: white;
+ text-align: center;
 }
 
 #subscription form {
